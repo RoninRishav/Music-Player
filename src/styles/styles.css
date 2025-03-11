@@ -1,0 +1,86 @@
+html, body{
+    -webkit-app-region: drag;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.main-app {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 15px; /* Adjust this value to control roundness */
+}
+
+/* Purple Pixel Heart styling */
+
+#purple-pixel-heart{
+    position: absolute; 
+    cursor: pointer;
+    -webkit-app-region: no-drag; /* Corrected */
+}
+
+.purple-heart-1{
+    top:0px;
+    left:85%;
+}
+
+.purple-heart-2{
+    top:0px;
+    right:87%;
+}
+
+#purple-pixel-heart:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* click Button SVG Styling */
+
+.click-button{
+    position: absolute;
+    top: 208px;
+    left: 94px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.click-button:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Pink Pixel Heart Styling */
+
+#pink-pixel-heart{
+    position: absolute;
+    cursor: pointer;
+    animation: rotateHeart 3s linear infinite;
+    transform-origin: center;
+    -webkit-app-region: no-drag;
+}
+
+.pink-heart-1{
+    top: 68px;
+    left: 23px;
+}
+
+.pink-heart-2{
+    top: 68px;
+    left: 228px;
+}
+
+#pink-pixel-heart:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Keyframes Animation */
+
+@keyframes rotateHeart{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}

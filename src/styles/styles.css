@@ -1,3 +1,15 @@
+:root {
+    --color-1: #B37EB5;
+    --color-2: #A27EAC;
+    --color-3: #D425EF;
+    --color-4: rgba(176, 241, 255, 1);
+    --color-5: #7AB1CF;
+    --color-6: #CBFFFE;
+    --color-7: #FFC3ED;
+    --color-8: #EBAEFB;
+    --color-9: #5F2568;
+}
+
 html, body{
     -webkit-app-region: drag;
     user-select: none;
@@ -15,7 +27,13 @@ html, body{
     border-radius: 15px; /* Adjust this value to control roundness */
 }
 
-/* Purple Pixel Heart styling */
+/* Hidden */
+
+.hidden{
+    display: none;
+}
+
+/* Purple Pixel */
 
 #purple-pixel-heart{
     position: absolute; 
@@ -33,12 +51,19 @@ html, body{
     right:87%;
 }
 
+.purple-heart-secret-message{
+    width: 33px;
+    height: 32px;
+    top: 391px;
+    left: 191px;
+}
+
 #purple-pixel-heart:hover{
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
 }
 
-/* click Button SVG Styling */
+/* click Button */
 
 .click-button{
     position: absolute;
@@ -53,13 +78,11 @@ html, body{
     transition: transform 0.3s ease-in-out;
 }
 
-/* Pink Pixel Heart Styling */
+/* Pink Pixel Heart */
 
 #pink-pixel-heart{
     position: absolute;
-    cursor: pointer;
     animation: rotateHeart 3s linear infinite;
-    transform-origin: center;
     -webkit-app-region: no-drag;
 }
 
@@ -73,9 +96,19 @@ html, body{
     left: 228px;
 }
 
-#pink-pixel-heart:hover{
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
+/* Next button */
+
+.next-button {
+    position: absolute;
+    top: 401px;
+    left: 225px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.next-button:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out
 }
 
 /* Keyframes Animation */

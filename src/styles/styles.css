@@ -111,6 +111,8 @@ html, body{
 
 #pink-pixel-heart{
     position: absolute;
+    width: 50px;
+    height: 50px;
     animation: rotateHeart 3s linear infinite;
     -webkit-app-region: no-drag;
 }
@@ -201,6 +203,32 @@ html, body{
     height: 95px;
     top: 84px;
     left: 86px;
+}
+
+/* Music player progress bar */
+
+.progress-bar{
+    position: absolute;
+    top: 235px;
+    left: 2px;
+    width: 252px;
+    height: 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+    -webkit-app-region: no-drag;
+    appearance: none;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    background-image: url('../../images/pink-pixel-heart.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 35px;
+    margin: 1px;
+    appearance: none;
 }
 
 /* Music Player Container & Buttons */

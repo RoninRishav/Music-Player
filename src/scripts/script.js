@@ -10,21 +10,25 @@ const openingPurpleHearts = document.querySelectorAll('.opening-purple-heart-js'
 const secretMessagePurpleHeart = document.querySelector('.purple-heart-secret-message');
 
 
-// Screen changing at opening screen
+// Screen changing to secret message screen
 openingPurpleHearts.forEach(purpleHeart => {
-    purpleHeart.addEventListener('click', () => {
-        openingScreen.classList.add('hidden');
-        secretMessageScreen.classList.remove('hidden');
-    })
+    purpleHeart.addEventListener('click', () => showScreen(secretMessageScreen))
 })
 
-clickButton.addEventListener('click', () => {
-    openingScreen.classList.add('hidden');
-    musicPlayerScreen.classList.remove('hidden');
-})
+// Screen changing to music player
+clickButton.addEventListener('click', () => showScreen(musicPlayerScreen))
 
-// Screen changing at secret message screen
-secretMessagePurpleHeart.addEventListener('click', () => {
-    secretMessageScreen.classList.add('hidden');
-    openingScreen.classList.remove('hidden');
-})
+// Screen changing to opening screen
+secretMessagePurpleHeart.addEventListener('click', () => showScreen(openingScreen));
+
+// Function to change screens 
+function showScreen(screenToShow) {
+    document.querySelectorAll('.opening-app-screen, .secret-message-screen, .music-player-screen')
+        .forEach(screen => {
+            screen.classList.remove('show');
+            screen.classList.add('hide');
+        })
+    
+        screenToShow.classList.add('show');
+        screenToShow.classList.remove('hide');
+}

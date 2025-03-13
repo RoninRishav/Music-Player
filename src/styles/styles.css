@@ -229,6 +229,7 @@ html, body{
     height: 35px;
     margin: 1px;
     appearance: none;
+    -webkit-app-region: no-drag;
 }
 
 /* Music Player Container & Buttons */
